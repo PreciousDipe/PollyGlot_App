@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>PollyGlot</title>
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="image">
+    <img src="assets/parrot.png" alt="A fancy picture of a parrot" class="img">
+    <div class="img_tag">
+      <h2>POLLYGLOT</h2>
+      <p id="img_text">Perfect Translation Every Time</p>
+    </div>
+  </div>
+  <div class="outer">
+    <div class="inner">
+      <p>Text to translate 👇</p>
+      <textarea id="text_area" rows="4" cols="30" placeholder="How are you?"></textarea>
+      <p>Select Language 👇</p>
+      <div class="language-options" id="language-el">
+        <label>
+          <input type="radio" name="language" value="French" id="fr-FR" checked>
+          France <span><img src="assets/fr-flag.png" alt="France Flag" class="flag"></span>
+        </label>
+        <label>
+          <input type="radio" name="language" value="Spanish" id="es-ES">
+          Spanish <span><img src="assets/sp-flag.png" alt="Spain Flag" class="flag"></span>
+        </label>
+        <label>
+          <input type="radio" name="language" value="Japanese" id="ja">
+          Japanese <span><img src="assets/jpn-flag.png" alt="Japan Flag" class="flag"></span>
+        </label>
+        <label>
+          <input type="radio" name="language" value="Chinese" id="zh-CN">
+          Chinese <span><img src="assets/chn-flag.png" alt="China Flag" class="flag"></span>
+        </label>
+      </div>
+      <button id="translate-el">Translate</button>
+    </div>
+  </div>
+  <div id="translation-text"></div>
+  <script src="index.js" type="module"></script>
+</body>
+</html>
