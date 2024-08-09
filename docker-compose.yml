@@ -1,0 +1,9 @@
+version: '2.13'
+
+services:
+  pollyglot-app:
+    build: .
+    ports:
+      - "3001:3000"
+    environment:
+      - API_KEY=${API_KEY}
