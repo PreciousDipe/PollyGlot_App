@@ -39,18 +39,25 @@ node server.js
 ```
 
 ## File Structure
-
-### `PollyGlot/`
-
-- **.gitignore**: Specifies files and directories to be ignored by Git, such as `node_modules` and `.env`.
-- **server.js**: The main server file using Express.js to serve static files and handle API requests.
-- **package.json**: Contains metadata about the project and its dependencies.
-
-### `public/`
-
-- **assets/**: Contains image assets used in the application.
-- **index.html**: The main HTML file with the user interface.
-- **index.css**: Stylesheet for the application.
-- **index.js**: JavaScript file handling the translation logic and interactions.
+```java
+pollyglot/
+│
+│── node_modules/
+│── .env
+│── .gitignore
+│── server.js
+│── package.json
+│── package-lock.json
+│
+└── public/
+    ├── assets/
+    │   ├── fr-flag.png
+    │   ├── jpn-flag.png
+    │   ├── sp-flag.png
+    │   ├── chn-flag.png
+    │   └── parrot.png
+    ├── index.html
+    ├── index.css
+    └── index.js
 
 
