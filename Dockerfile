@@ -1,18 +1,20 @@
-# Start from the Node.js 22 image on Docker hub
+# Use Node.js 22 Alpine as the base image
 FROM node:22-alpine
 
-#s Specify the Working directory inside the node container that all the commands will run
+# Set the working directory in the container
 WORKDIR /PollyGlot_App
 
-# Copy the package files into the image
+# Copy only package.json and package-lock.json to install dependencies
 COPY package*.json ./
 
-# Install the copied dependencies in package.json file into the image
+# Install dependencies
 RUN npm install
 
-# Copy all the other files into the image
+# Copy the rest of the application files
 COPY . .
 
-# Start the container to run the image
-CMD ["npm", "start"]
+# Expose the application's port
+EXPOSE 3000
 
+# Start the application
+CMD ["npm", "start"]

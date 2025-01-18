@@ -1,10 +1,10 @@
-version: '2.13'
-
 services:
   pollyglot-app:
-    build: .
-    image: preciousdipe/pollyglot_app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "3001:3000"
-    environment:
-      - API_KEY=${API_KEY}
+      - "3000:3000"
+    volumes:
+      - .:/PollyGlot_App
+    command: ["npm", "start"]
