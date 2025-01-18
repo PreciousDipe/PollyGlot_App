@@ -1,5 +1,4 @@
 const express = require('express');
-const serverless = require('serverless-http');
 const path = require('path');
 require('dotenv').config();
 
@@ -18,7 +17,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Export the handler for Netlify
-module.exports.handler = serverless(app);
 
-
+// Start the server locally
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
